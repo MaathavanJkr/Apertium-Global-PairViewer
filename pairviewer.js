@@ -21,6 +21,9 @@ let MARKER_STROKE = "black";
 let MARKER_STROKE_WIDTH = "0.3px";
 let MARKER_ORIENT = "auto";
 
+let POINT_OPACITY = 0.6;
+let LABEL_OPACITY = 0.9;
+
 let proj = d3
   .geoOrthographic()
   .translate([fixedWidth / 2, fixedHeight / 2])
@@ -1100,7 +1103,7 @@ function handleUnusedPoints() {
   if ($("#pointCheckbox").prop("checked") === false) {
     setPoints(0, 0);
   } else {
-    setPoints(0.6, 0.9);
+    setPoints(POINT_OPACITY, LABEL_OPACITY);
     return;
   }
 
@@ -1111,19 +1114,19 @@ function handleUnusedPoints() {
       let points = svg.selectAll(".point")._groups[0];
       for (let j = 0; j < points.length; j++) {
         if (points[j].getAttribute("coordinate") === dsource) {
-          points[j].setAttribute("style", "opacity: 0.6");
+          points[j].setAttribute("style", "opacity: " + POINT_OPACITY);
         }
         if (points[j].getAttribute("coordinate") === dtarget) {
-          points[j].setAttribute("style", "opacity: 0.6");
+          points[j].setAttribute("style", "opacity: " + POINT_OPACITY);
         }
       }
       let labels = svg.selectAll(".label")._groups[0];
       for (let k = 0; k < labels.length; k++) {
         if (labels[k].getAttribute("coordinate") === dsource) {
-          labels[k].setAttribute("style", "opacity: 0.9");
+          labels[k].setAttribute("style", "opacity: " + LABEL_OPACITY);
         }
         if (labels[k].getAttribute("coordinate") === dtarget) {
-          labels[k].setAttribute("style", "opacity: 0.9");
+          labels[k].setAttribute("style", "opacity: " + LABEL_OPACITY);
         }
       }
     }
@@ -1138,7 +1141,7 @@ function handleUnusedPoints() {
     ) {
       svg
         .selectAll(".point")
-        ._groups[0][i].setAttribute("style", "opacity: 0.6");
+        ._groups[0][i].setAttribute("style", "opacity: " + POINT_OPACITY);
     }
   }
   for (let i = 0; i < svg.selectAll(".label")._groups[0].length; i++) {
@@ -1149,7 +1152,7 @@ function handleUnusedPoints() {
     ) {
       svg
         .selectAll(".label")
-        ._groups[0][i].setAttribute("style", "opacity: 0.9");
+        ._groups[0][i].setAttribute("style", "opacity: " + LABEL_OPACITY);
     }
   }
   refresh();
