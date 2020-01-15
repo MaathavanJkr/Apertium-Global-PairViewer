@@ -15,7 +15,7 @@ let currentDirFilter = [];
 // Begin Constants
 let MARKER_REF_X_ONE_WAY = "2";
 let MARKER_REF_X_TWO_WAY = "2.5";
-let MARKER_REFY = "2";
+let MARKER_REF_Y = "2";
 let MARKER_UNITS = "userSpaceOnUse";
 let MARKER_SIZE = "40";
 let MARKER_STROKE = "black";
@@ -399,7 +399,7 @@ function ready(error, world, places, points, diversity) {
     .attr("id", "trunkoneway")
     .attr("viewBox", "0 -5 10 10")
     .attr("refX", MARKER_REF_X_ONE_WAY)
-    .attr("refY", MARKER_REFY)
+    .attr("refY", MARKER_REF_Y)
     .attr("markerUnits", MARKER_UNITS)
     .attr("markerWidth", MARKER_SIZE)
     .attr("markerHeight", MARKER_SIZE)
@@ -414,7 +414,7 @@ function ready(error, world, places, points, diversity) {
     .attr("id", "trunktwoway")
     .attr("viewBox", "0 -5 10 10")
     .attr("refX", MARKER_REF_X_TWO_WAY)
-    .attr("refY", MARKER_REFY)
+    .attr("refY", MARKER_REF_Y)
     .attr("markerUnits", MARKER_UNITS)
     .attr("markerWidth", MARKER_SIZE)
     .attr("markerHeight", MARKER_SIZE)
@@ -429,7 +429,7 @@ function ready(error, world, places, points, diversity) {
     .attr("id", "stagingoneway")
     .attr("viewBox", "0 -5 10 10")
     .attr("refX", MARKER_REF_X_ONE_WAY)
-    .attr("refY", MARKER_REFY)
+    .attr("refY", MARKER_REF_Y)
     .attr("markerUnits", MARKER_UNITS)
     .attr("markerWidth", MARKER_SIZE)
     .attr("markerHeight", MARKER_SIZE)
@@ -444,7 +444,7 @@ function ready(error, world, places, points, diversity) {
     .attr("id", "stagingtwoway")
     .attr("viewBox", "0 -5 10 10")
     .attr("refX", MARKER_REF_X_TWO_WAY)
-    .attr("refY", MARKER_REFY)
+    .attr("refY", MARKER_REF_Y)
     .attr("markerUnits", MARKER_UNITS)
     .attr("markerWidth", MARKER_SIZE)
     .attr("markerHeight", MARKER_SIZE)
@@ -459,7 +459,7 @@ function ready(error, world, places, points, diversity) {
     .attr("id", "nurseryoneway")
     .attr("viewBox", "0 -5 10 10")
     .attr("refX", MARKER_REF_X_ONE_WAY)
-    .attr("refY", MARKER_REFY)
+    .attr("refY", MARKER_REF_Y)
     .attr("markerUnits", MARKER_UNITS)
     .attr("markerWidth", MARKER_SIZE)
     .attr("markerHeight", MARKER_SIZE)
@@ -474,7 +474,7 @@ function ready(error, world, places, points, diversity) {
     .attr("id", "nurserytwoway")
     .attr("viewBox", "0 -5 10 10")
     .attr("refX", MARKER_REF_X_TWO_WAY)
-    .attr("refY", MARKER_REFY)
+    .attr("refY", MARKER_REF_Y)
     .attr("markerUnits", MARKER_UNITS)
     .attr("markerWidth", MARKER_SIZE)
     .attr("markerHeight", MARKER_SIZE)
@@ -489,7 +489,7 @@ function ready(error, world, places, points, diversity) {
     .attr("id", "incubatoroneway")
     .attr("viewBox", "0 -5 10 10")
     .attr("refX", MARKER_REF_X_ONE_WAY)
-    .attr("refY", MARKER_REFY)
+    .attr("refY", MARKER_REF_Y)
     .attr("markerUnits", MARKER_UNITS)
     .attr("markerWidth", MARKER_SIZE)
     .attr("markerHeight", MARKER_SIZE)
@@ -504,7 +504,7 @@ function ready(error, world, places, points, diversity) {
     .attr("id", "incubatortwoway")
     .attr("viewBox", "0 -5 10 10")
     .attr("refX", MARKER_REF_X_TWO_WAY)
-    .attr("refY", MARKER_REFY)
+    .attr("refY", MARKER_REF_Y)
     .attr("markerUnits", MARKER_UNITS)
     .attr("markerWidth", MARKER_SIZE)
     .attr("markerHeight", MARKER_SIZE)
