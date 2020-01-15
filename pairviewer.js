@@ -12,8 +12,9 @@ let currentRepoFilter = [];
 let currentPointFilter = [];
 let currentDirFilter = [];
 
-let MARKER_REFX = "2";
-let MARKER_REFX2 = "2.5";
+// Begin Constants
+let MARKER_REF_X_ONE_WAY = "2";
+let MARKER_REF_X_TWO_WAY = "2.5";
 let MARKER_REFY = "2";
 let MARKER_UNITS = "userSpaceOnUse";
 let MARKER_SIZE = "40";
@@ -23,6 +24,7 @@ let MARKER_ORIENT = "auto";
 
 let POINT_OPACITY = 0.6;
 let LABEL_OPACITY = 0.9;
+// End Constants
 
 let proj = d3
   .geoOrthographic()
@@ -396,7 +398,7 @@ function ready(error, world, places, points, diversity) {
     .append("marker")
     .attr("id", "trunkoneway")
     .attr("viewBox", "0 -5 10 10")
-    .attr("refX", MARKER_REFX)
+    .attr("refX", MARKER_REF_X_ONE_WAY)
     .attr("refY", MARKER_REFY)
     .attr("markerUnits", MARKER_UNITS)
     .attr("markerWidth", MARKER_SIZE)
@@ -411,7 +413,7 @@ function ready(error, world, places, points, diversity) {
     .append("marker")
     .attr("id", "trunktwoway")
     .attr("viewBox", "0 -5 10 10")
-    .attr("refX", MARKER_REFX2)
+    .attr("refX", MARKER_REF_X_TWO_WAY)
     .attr("refY", MARKER_REFY)
     .attr("markerUnits", MARKER_UNITS)
     .attr("markerWidth", MARKER_SIZE)
@@ -426,7 +428,7 @@ function ready(error, world, places, points, diversity) {
     .append("marker")
     .attr("id", "stagingoneway")
     .attr("viewBox", "0 -5 10 10")
-    .attr("refX", MARKER_REFX)
+    .attr("refX", MARKER_REF_X_ONE_WAY)
     .attr("refY", MARKER_REFY)
     .attr("markerUnits", MARKER_UNITS)
     .attr("markerWidth", MARKER_SIZE)
@@ -441,7 +443,7 @@ function ready(error, world, places, points, diversity) {
     .append("marker")
     .attr("id", "stagingtwoway")
     .attr("viewBox", "0 -5 10 10")
-    .attr("refX", MARKER_REFX2)
+    .attr("refX", MARKER_REF_X_TWO_WAY)
     .attr("refY", MARKER_REFY)
     .attr("markerUnits", MARKER_UNITS)
     .attr("markerWidth", MARKER_SIZE)
@@ -456,7 +458,7 @@ function ready(error, world, places, points, diversity) {
     .append("marker")
     .attr("id", "nurseryoneway")
     .attr("viewBox", "0 -5 10 10")
-    .attr("refX", MARKER_REFX)
+    .attr("refX", MARKER_REF_X_ONE_WAY)
     .attr("refY", MARKER_REFY)
     .attr("markerUnits", MARKER_UNITS)
     .attr("markerWidth", MARKER_SIZE)
@@ -471,7 +473,7 @@ function ready(error, world, places, points, diversity) {
     .append("marker")
     .attr("id", "nurserytwoway")
     .attr("viewBox", "0 -5 10 10")
-    .attr("refX", MARKER_REFX2)
+    .attr("refX", MARKER_REF_X_TWO_WAY)
     .attr("refY", MARKER_REFY)
     .attr("markerUnits", MARKER_UNITS)
     .attr("markerWidth", MARKER_SIZE)
@@ -486,7 +488,7 @@ function ready(error, world, places, points, diversity) {
     .append("marker")
     .attr("id", "incubatoroneway")
     .attr("viewBox", "0 -5 10 10")
-    .attr("refX", MARKER_REFX)
+    .attr("refX", MARKER_REF_X_ONE_WAY)
     .attr("refY", MARKER_REFY)
     .attr("markerUnits", MARKER_UNITS)
     .attr("markerWidth", MARKER_SIZE)
@@ -501,7 +503,7 @@ function ready(error, world, places, points, diversity) {
     .append("marker")
     .attr("id", "incubatortwoway")
     .attr("viewBox", "0 -5 10 10")
-    .attr("refX", MARKER_REFX2)
+    .attr("refX", MARKER_REF_X_TWO_WAY)
     .attr("refY", MARKER_REFY)
     .attr("markerUnits", MARKER_UNITS)
     .attr("markerWidth", MARKER_SIZE)
