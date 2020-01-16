@@ -13,6 +13,7 @@ let currentPointFilter = [];
 let currentDirFilter = [];
 
 // Begin Constants
+let MARKER_VIEW_BOX = "0 -5 10 10";
 let MARKER_REF_X_ONE_WAY = "2";
 let MARKER_REF_X_TWO_WAY = "2.5";
 let MARKER_REF_Y = "2";
@@ -21,6 +22,8 @@ let MARKER_SIZE = "40";
 let MARKER_STROKE = "black";
 let MARKER_STROKE_WIDTH = "0.3px";
 let MARKER_ORIENT = "auto";
+let MARKER_PATH_ONE_WAY = "M 1 1 L 3 2 L 1 3 Z";
+let MARKER_PATH_TWO_WAY = "M0 2 L 2 1 L 2 3 L 0 2 M 2.5 1 L 4.5 2 L 2.5 3 L 2.5 1";
 
 let POINT_OPACITY = 0.6;
 let LABEL_OPACITY = 0.9;
@@ -397,7 +400,7 @@ function ready(error, world, places, points, diversity) {
   markerDef
     .append("marker")
     .attr("id", "trunkoneway")
-    .attr("viewBox", "0 -5 10 10")
+    .attr("viewBox", MARKER_VIEW_BOX)
     .attr("refX", MARKER_REF_X_ONE_WAY)
     .attr("refY", MARKER_REF_Y)
     .attr("markerUnits", MARKER_UNITS)
@@ -408,11 +411,11 @@ function ready(error, world, places, points, diversity) {
     .style("stroke", MARKER_STROKE)
     .style("stroke-width", MARKER_STROKE_WIDTH)
     .append("path")
-    .attr("d", "M 1 1 L 3 2 L 1 3 Z");
+    .attr("d", MARKER_PATH_ONE_WAY);
   markerDef
     .append("marker")
     .attr("id", "trunktwoway")
-    .attr("viewBox", "0 -5 10 10")
+    .attr("viewBox", MARKER_VIEW_BOX)
     .attr("refX", MARKER_REF_X_TWO_WAY)
     .attr("refY", MARKER_REF_Y)
     .attr("markerUnits", MARKER_UNITS)
@@ -423,11 +426,11 @@ function ready(error, world, places, points, diversity) {
     .style("stroke", MARKER_STROKE)
     .style("stroke-width", MARKER_STROKE_WIDTH)
     .append("path")
-    .attr("d", "M0 2 L 2 1 L 2 3 L 0 2 M 2.5 1 L 4.5 2 L 2.5 3 L 2.5 1");
+    .attr("d", MARKER_PATH_TWO_WAY);
   markerDef
     .append("marker")
     .attr("id", "stagingoneway")
-    .attr("viewBox", "0 -5 10 10")
+    .attr("viewBox", MARKER_VIEW_BOX)
     .attr("refX", MARKER_REF_X_ONE_WAY)
     .attr("refY", MARKER_REF_Y)
     .attr("markerUnits", MARKER_UNITS)
@@ -438,11 +441,11 @@ function ready(error, world, places, points, diversity) {
     .style("stroke", MARKER_STROKE)
     .style("stroke-width", MARKER_STROKE_WIDTH)
     .append("path")
-    .attr("d", "M 1 1 L 3 2 L 1 3 Z");
+    .attr("d", MARKER_PATH_ONE_WAY);
   markerDef
     .append("marker")
     .attr("id", "stagingtwoway")
-    .attr("viewBox", "0 -5 10 10")
+    .attr("viewBox", MARKER_VIEW_BOX)
     .attr("refX", MARKER_REF_X_TWO_WAY)
     .attr("refY", MARKER_REF_Y)
     .attr("markerUnits", MARKER_UNITS)
@@ -453,11 +456,11 @@ function ready(error, world, places, points, diversity) {
     .style("stroke", MARKER_STROKE)
     .style("stroke-width", MARKER_STROKE_WIDTH)
     .append("path")
-    .attr("d", "M0 2 L 2 1 L 2 3 L 0 2 M 2.5 1 L 4.5 2 L 2.5 3 L 2.5 1");
+    .attr("d", MARKER_PATH_TWO_WAY);
   markerDef
     .append("marker")
     .attr("id", "nurseryoneway")
-    .attr("viewBox", "0 -5 10 10")
+    .attr("viewBox", MARKER_VIEW_BOX)
     .attr("refX", MARKER_REF_X_ONE_WAY)
     .attr("refY", MARKER_REF_Y)
     .attr("markerUnits", MARKER_UNITS)
@@ -468,11 +471,11 @@ function ready(error, world, places, points, diversity) {
     .style("stroke", MARKER_STROKE)
     .style("stroke-width", MARKER_STROKE_WIDTH)
     .append("path")
-    .attr("d", "M 1 1 L 3 2 L 1 3 Z");
+    .attr("d", MARKER_PATH_ONE_WAY);
   markerDef
     .append("marker")
     .attr("id", "nurserytwoway")
-    .attr("viewBox", "0 -5 10 10")
+    .attr("viewBox", MARKER_VIEW_BOX)
     .attr("refX", MARKER_REF_X_TWO_WAY)
     .attr("refY", MARKER_REF_Y)
     .attr("markerUnits", MARKER_UNITS)
@@ -483,11 +486,11 @@ function ready(error, world, places, points, diversity) {
     .style("stroke", MARKER_STROKE)
     .style("stroke-width", MARKER_STROKE_WIDTH)
     .append("path")
-    .attr("d", "M0 2 L 2 1 L 2 3 L 0 2 M 2.5 1 L 4.5 2 L 2.5 3 L 2.5 1");
+    .attr("d", MARKER_PATH_TWO_WAY);
   markerDef
     .append("marker")
     .attr("id", "incubatoroneway")
-    .attr("viewBox", "0 -5 10 10")
+    .attr("viewBox", MARKER_VIEW_BOX)
     .attr("refX", MARKER_REF_X_ONE_WAY)
     .attr("refY", MARKER_REF_Y)
     .attr("markerUnits", MARKER_UNITS)
@@ -498,11 +501,11 @@ function ready(error, world, places, points, diversity) {
     .style("stroke", MARKER_STROKE)
     .style("stroke-width", MARKER_STROKE_WIDTH)
     .append("path")
-    .attr("d", "M 1 1 L 3 2 L 1 3 Z");
+    .attr("d", MARKER_PATH_ONE_WAY);
   markerDef
     .append("marker")
     .attr("id", "incubatortwoway")
-    .attr("viewBox", "0 -5 10 10")
+    .attr("viewBox", MARKER_VIEW_BOX)
     .attr("refX", MARKER_REF_X_TWO_WAY)
     .attr("refY", MARKER_REF_Y)
     .attr("markerUnits", MARKER_UNITS)
@@ -513,7 +516,7 @@ function ready(error, world, places, points, diversity) {
     .style("stroke", MARKER_STROKE)
     .style("stroke-width", MARKER_STROKE_WIDTH)
     .append("path")
-    .attr("d", "M0 2 L 2 1 L 2 3 L 0 2 M 2.5 1 L 4.5 2 L 2.5 3 L 2.5 1");
+    .attr("d", MARKER_PATH_TWO_WAY);
 
   svg
     .append("circle")
