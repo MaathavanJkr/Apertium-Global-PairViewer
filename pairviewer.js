@@ -92,7 +92,7 @@ svg.style("background", "black");
 
 let zoom = d3
   .zoom()
-  .scaleExtent([500, 50000])
+  .scaleExtent([500, 50000]) // Very tiny below 500, Too much zoomed after 50000
   .on("start", zoomstart)
   .on("zoom", zoomed)
   .on("end", zoomend);
@@ -639,7 +639,7 @@ function ready(error, world, places, points, diversity) {
           repo
         )
         .style("left", d3.event.pageX + "px")
-        .style("top", d3.event.pageY - 28 + "px");
+        .style("top", d3.event.pageY - 28 + "px"); // Height of the div is 28px
     })
     .on("mouseout", function () {
       div
@@ -674,7 +674,7 @@ function ready(error, world, places, points, diversity) {
       div
         .html(d.tag + "<br/>" + codeToLanguage(d.tag)) // Looking up full name
         .style("left", d3.event.pageX + "px")
-        .style("top", d3.event.pageY - 28 + "px");
+        .style("top", d3.event.pageY - 28 + "px"); // Height of the div is 28px
     })
     .on("mouseout", function () {
       div
@@ -709,7 +709,7 @@ function ready(error, world, places, points, diversity) {
       div
         .html(d.tag + "<br/>" + codeToLanguage(d.tag))
         .style("left", d3.event.pageX + "px")
-        .style("top", d3.event.pageY - 28 + "px");
+        .style("top", d3.event.pageY - 28 + "px"); // Height of the div is 28px
     })
     .on("mouseout", function () {
       div
