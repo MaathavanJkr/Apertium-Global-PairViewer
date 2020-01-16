@@ -235,9 +235,6 @@ legend.append("stop")
   .attr("stop-color", "#003300")
   .attr("stop-opacity", 1);
 
-/**
- * Legend Width and Height Constants
-*/
 let legendWidth = 200;
 let legendHeight = 20;
 
@@ -342,9 +339,6 @@ function codeToLanguage(code) {
   return codeToLangTable[code] || "Unknown";
 }
 
-/**
- * Time Constants
- */
 let timer = 0;
 let delay = 200;
 let prevent = false;
