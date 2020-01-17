@@ -27,6 +27,8 @@ let MARKER_PATH_TWO_WAY = "M0 2 L 2 1 L 2 3 L 0 2 M 2.5 1 L 4.5 2 L 2.5 3 L 2.5 
 
 let POINT_OPACITY = 0.6;
 let LABEL_OPACITY = 0.9;
+
+let LABELS_FONT_SIZE = "10px";
 // End Constants
 
 let proj = d3
@@ -654,6 +656,7 @@ function ready(error, world, places, points, diversity) {
     .append("g")
     .attr("class", "labels")
     .style("fill", "white")
+    .style("font-size", LABELS_FONT_SIZE)
     .selectAll("text")
     .data(points.point_data)
     .enter()

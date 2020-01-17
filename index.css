@@ -60,7 +60,7 @@ body {
 }
 
 .labels {
-  font: 10px sans-serif;
+  font-family: sans-serif;
   opacity: 0.9;
 }
 
