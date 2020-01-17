@@ -27,8 +27,9 @@ let MARKER_PATH_TWO_WAY = "M0 2 L 2 1 L 2 3 L 0 2 M 2.5 1 L 4.5 2 L 2.5 3 L 2.5 
 
 let POINT_OPACITY = 0.6;
 let LABEL_OPACITY = 0.9;
-
 let LABELS_FONT_SIZE = "10px";
+
+let QUARTER_CIRCLE_ARC_LENGTH = 1.57;
 // End Constants
 
 let proj = d3
@@ -780,7 +781,7 @@ function positionLabels() {
     })
     .style("display", function (d) {
       let dist = d3.geoDistance(d.geometry.coordinates, centerPos);
-      return dist > 1.57 ? "none" : "inline";
+      return dist > QUARTER_CIRCLE_ARC_LENGTH ? "none" : "inline";
     });
 }
 
@@ -1181,8 +1182,8 @@ function fadeAtEdge(d) {
     end = d.target,
     distancePair = d3.geoDistance(start, end); // distance of a flyer (in radians)
 
-  let startDist = 1.57 - d3.geoDistance(start, centerPos),
-    endDist = 1.57 - d3.geoDistance(end, centerPos);
+  let startDist = QUARTER_CIRCLE_ARC_LENGTH - d3.geoDistance(start, centerPos),
+    endDist = QUARTER_CIRCLE_ARC_LENGTH - d3.geoDistance(end, centerPos);
 
   let fade = d3
     .scaleLinear()
